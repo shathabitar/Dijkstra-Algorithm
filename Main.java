@@ -4,8 +4,8 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		//GraphDijkstra graph = new GraphDijkstra(8);
-		GraphBellmanFord graph = new GraphBellmanFord(8);
+		GraphDijkstra graph = new GraphDijkstra(8);
+
 	        graph.addNode(0, new GraphNode("Assignment 1", "01-06-2024", "urgent", "University"));
 	        graph.addNode(1, new GraphNode("Clean", "02-06-2024", "normal", "Personal"));
 	        graph.addNode(2, new GraphNode("Project 1", "03-06-2024", "normal", "Work"));
@@ -28,8 +28,8 @@ public class Main {
 	        graph.addEdge(4, 0, 9);
 	        graph.addEdge(4, 5, 2);
 	        graph.addEdge(4, 3, 2);
-	        graph.addEdge(4, 6, -1);
-	        graph.addEdge(5, 3, 1);
+	        graph.addEdge(4, 6, 1);
+	        graph.addEdge(5, 3, 9);
 	        graph.addEdge(5, 2, 6);
 	        graph.addEdge(5, 6, 6);
 	        graph.addEdge(5, 7, 3);
@@ -38,8 +38,7 @@ public class Main {
 	        graph.addEdge(7, 1, 15);
 
 
-	        graph.bellmanFord(0);
-	        //graph.dijkstra(0);
+	        graph.dijkstra(0);
 	}
 
 }
